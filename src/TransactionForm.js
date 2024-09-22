@@ -7,7 +7,7 @@ function TransactionForm({ addTransaction }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-     const transactionAmount = type === 'Income' ? +amount : -Math.abs(amount);
+     const transactionAmount = type === 'Income' ? +amount : -Math.abs(+amount);
     const newTransaction = {
       id: Date.now(),
       description,
